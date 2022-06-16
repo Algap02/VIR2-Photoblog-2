@@ -10,7 +10,8 @@ docker-compose exec -T websrv docker-php-ext-install mysql
 docker-compose exec -T websrv /etc/init.d/apache2 reload
 
 
-docker build -t dockerfile .
+docker build -t Kali .
+docker run -it Kali bash
 
 docker pull kalilinux/kali-last-release
 docker container run -it alpine /bin/sh
