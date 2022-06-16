@@ -8,3 +8,7 @@ wget -nc https://raw.githubusercontent.com/Algap02/VIR2-Photoblog-2/main/docker-
 docker-compose up -d
 docker-compose exec -T websrv docker-php-ext-install mysql
 docker-compose exec -T websrv /etc/init.d/apache2 reload
+
+
+docker pull kalilinux/kali-last-release
+docker container run -it alpine /bin/sh
