@@ -1,5 +1,6 @@
 #!/bin/sh
 apt update -y
+apt upgrade -y
 apt install -y docker docker-compose git
 git clone https://github.com/7ric/Photoblog.git /php
 sed -i 's/localhost/db/g' /php/classes/db.php
