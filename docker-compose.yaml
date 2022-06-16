@@ -1,0 +1,19 @@
+version: '3'
+services:
+  websrv:
+    image: php:5-apache
+    ports:
+      - "80:80"
+    volumes:
+      - /php:/var/www/html
+  db:
+    image: mysql:5
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_USER=pentesterlab
+      - MYSQL_PASSWORD=pentesterlab
+      - MYSQL_DATABASE=photoblog
+    volumes:
+      - /php/photoblog.sql:/docker-entrypoint-initdb.d/photoblog.sql
