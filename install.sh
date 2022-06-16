@@ -12,6 +12,3 @@ docker-compose exec -T websrv /etc/init.d/apache2 reload
 
 docker build -t dockerfile .
 docker run -it dockerfile bash
-
-docker pull kalilinux/kali-last-release
-docker container run -it alpine /bin/sh
