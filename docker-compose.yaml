@@ -1,6 +1,7 @@
 version: '3'
 services:
   websrv:
+    restart: always
     image: php:5-apache
     ports:
       - "80:80"
@@ -10,6 +11,7 @@ services:
     image: mysql:5
     ports:
       - "3306:3306"
+    restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_USER=pentesterlab
